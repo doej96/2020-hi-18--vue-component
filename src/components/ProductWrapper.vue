@@ -1,12 +1,13 @@
 <template>
   <div class="product-wrapper">
-    <Product />
+    <Product v-for="v in data" :key="v.id" />
   </div>
 </template>
 <script>
 import Product from './Product.vue'
 export default {
   name: 'ProductWrapper',
+  props: ['data'],
   data() {
     return {
 
