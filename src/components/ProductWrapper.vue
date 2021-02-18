@@ -1,6 +1,6 @@
 <template>
   <div class="product-wrapper">
-    <Product v-for="v in data" :key="v.id" />
+    <Product v-for="v in data" :key="v.id" :v="v" />
   </div>
 </template>
 <script>
@@ -17,5 +17,5 @@ export default {
 }
 </script>
 <style scoped>
-  .product {margin: 1em 0; display: flex; flex-wrap: wrap;}
+  .product-wrapper {margin: 1em 0; display: flex; flex-wrap: wrap;}
 </style>
