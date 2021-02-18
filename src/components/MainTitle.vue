@@ -16,6 +16,6 @@ export default {
 }
 </script>
 <style scoped>
-  h1 {}
+  h1 {font-size: 2em; color: #444;}
   p {font-size: 1.25em; padding: 1em; color: #777;}
 </style>
