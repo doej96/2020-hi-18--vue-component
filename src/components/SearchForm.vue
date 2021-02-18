@@ -1,7 +1,7 @@
 <template>
   <div>
     <form>
-      <SearchInput />
+      <SearchInput @@onChange="onChange"/>
     </form>
   </div>
 </template>
@@ -11,11 +11,17 @@ export default {
   name: 'SearchForm',
   data() {
     return {
-
     }
   },
   components: {
     SearchInput
+  },
+  methods: {
+    onChange(v) {
+      this.query = v
+      this.$emit('@onChange', v)
+      // 또 부모에게 v(query)전달함
+    }
   }
 }
 </script>
